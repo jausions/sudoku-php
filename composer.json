@@ -1,0 +1,19 @@
+{
+  "name": "abacus11/sudoku",
+  "description": "Sudoku generator and solver written in PHP",
+  "keywords": ["sudoku", "solver", "generator", "php"],
+  "homepage": "https://github.com/11abacus/sudoku-php",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Philippe Jausions",
+      "email": "Philippe.Jausions@11abacus.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Abacus11\\Games\\Sudoku\\": "src/"
+    }
+  }
+}
