@@ -13,11 +13,14 @@ class HTML implements Renderer
         $cells = $grid->getCells();
         $scale = $grid->getScale();
 
+        $cell_to_zone = $zones->getCellToZoneMap();
+
         $html = '<table>' . PHP_EOL;
         for ($x = 0; $x < $scale; ++$x) {
             $html .= '<tr>';
             for ($y = 0; $y < $scale; ++$y) {
-                $html .= '<td>' . $cells[$x * $scale + $y] . "</td>";
+                $c = $x * $scale + $y;
+                $html .= '<td class="sudoku-zone-' . $cell_to_zone[$c] . '"><span>' . $cells[$c] . "</span></td>";
             }
             $html .= '</tr>' . PHP_EOL;
         }
